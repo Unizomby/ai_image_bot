@@ -1,4 +1,11 @@
-pip install google-generativeai
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# Example usage:
+install("google-generativeai")
 
 import os
 import streamlit as st
